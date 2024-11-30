@@ -1,17 +1,11 @@
+@charset "UTF-8";
 *, ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
   background-color: #fff;
   padding: 5rem;
   letter-spacing: 0.2rem;
@@ -22,32 +16,53 @@ body {
   width: clamp(36rem, 90vw, 102.4rem);
 }
 
-.header {
-  position: relative;
-  height: 95vh;
-  background-image: linear-gradient(rgba(186, 133, 84, 0.7) 0.03%, rgba(1, 1, 1, 0.7) 99.94%), url("../image/header_background.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+@keyframes leftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.header__logo {
-  position: absolute;
-  top: 5rem;
-  left: 5rem;
-  height: 7rem;
-  width: 5.6rem;
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
-.header__box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100vw;
-  text-align: center;
+@keyframes btnToUp {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.header .title-first__main {
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.title-first__main {
   display: block;
   color: #fff;
   font-weight: 800;
@@ -59,7 +74,7 @@ body {
   animation: leftToRight 1.7s ease 1s;
   backface-visibility: hidden;
 }
-.header .title-first__secondary {
+.title-first__secondary {
   display: block;
   color: #fff;
   font-weight: 200;
@@ -71,6 +86,7 @@ body {
   margin-bottom: 6.5rem;
 }
 
+/* Стили компонентов*/
 .btn:link, .btn:visited {
   position: relative;
   display: inline-block;
@@ -113,39 +129,28 @@ body {
   animation-fill-mode: backwards;
 }
 
-@keyframes leftToRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  80% {
-    transform: translateX(1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.header {
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(rgba(161, 79, 3, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../image/header_background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
 }
-@keyframes RightToLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem);
-  }
-  80% {
-    transform: translateX(-1rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.header__logo {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  height: 7rem;
+  width: 5.6rem;
 }
-@keyframes btnToUp {
-  0% {
-    opacity: 0;
-    transform: translateY(5rem);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.header__box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

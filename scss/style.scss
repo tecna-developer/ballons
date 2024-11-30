@@ -1,7 +1,21 @@
 
-@import 'main.scss';
-@import 'header.scss';
+// переменные SCSS
+@import 'abstract/variables.scss';
+@import 'abstract/mixins.scss';
+@import 'abstract/functions.scss';
+
+// Основныее стили
+@import 'base/_main.scss';
+@import 'base/_animations.scss';
+@import 'base/_uttilites.scss';
+@import 'base/_typography.scss';
+
+/* Стили компонентов*/
+@import 'components/_button.scss';
+@import 'layout/header.scss';
 
 
 
 
+
+  
