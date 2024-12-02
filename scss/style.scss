@@ -5,14 +5,18 @@
 @import 'abstract/functions.scss';
 
 // Основныее стили
-@import 'base/_main.scss';
-@import 'base/_animations.scss';
-@import 'base/_uttilites.scss';
-@import 'base/_typography.scss';
+@import 'base/main.scss';
+@import 'base/animations.scss';
+@import 'base/uttilites.scss';
+@import 'base/typography.scss';
 
 /* Стили компонентов*/
 @import 'components/_button.scss';
+
+//Layout style
 @import 'layout/header.scss';
+@import 'layout/grid.scss';
+
 
 
 

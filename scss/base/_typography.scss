@@ -36,3 +36,16 @@ body {
         margin-bottom: 6.5rem;
     }
 }
+
+.title-second {
+    text-align: center;
+    font-size: $font-size-h2;
+    text-transform: uppercase;
+    text-shadow: $text-shadow;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    background: linear-gradient(rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color:transparent;
+}
