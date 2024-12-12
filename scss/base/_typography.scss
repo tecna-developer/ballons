@@ -5,6 +5,7 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
+    color:$color-gray-light;
 }
 
 // Стили заголовка
@@ -48,4 +49,20 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color:transparent;
+    &:hover {
+        animation:skewH2 .3s ease-in-out;
+        backface-visibility: hidden;
+    }
+    
+}
+.title-third {
+    font-size: 2rem;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+.section__paragraph {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 140%;
+    
 }

@@ -1,0 +1,14 @@
+.gallery {
+    position: relative;
+    &__wrap {
+        // position: absolute;
+        width: 31.8rem;
+        height: 20rem;
+        border-radius:.5rem; 
+    }
+    &__img {
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: .5rem;
+    }
+}
