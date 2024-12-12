@@ -12,8 +12,7 @@ body {
 }
 
 .container {
-  background-color: #777777;
-  width: clamp(36rem, 90vw, 102.4rem);
+  background-color: #fff;
 }
 
 @keyframes leftToRight {
@@ -54,6 +53,10 @@ body {
 }
 .margin-vertical-small {
   margin-block-end: 1rem;
+}
+
+.margin-bottom-20px {
+  margin-block-end: 2rem;
 }
 
 .margin-vertical-big {
@@ -131,6 +134,14 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 140%;
+}
+
+.icon-Vector, .icon-Vector-1, .icon-Vector-2, .icon-Vector-3 {
+  font-size: 2.5rem;
+  background: linear-gradient(rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 /* Стили компонентов*/
@@ -232,6 +243,12 @@ body {
   transform: scale(0.95);
 }
 
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2.5rem;
+  text-align: center;
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -300,5 +317,17 @@ body {
 }
 
 .section__about {
-  padding-block: 8rem;
+  padding: 8rem 0;
+}
+
+.section__adventure {
+  padding-block: 20rem;
+  background-image: linear-gradient(rgba(161, 79, 3, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../image/adveture_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: skewY(7deg);
+}
+.section__adventure > * {
+  transform: skewY(-7deg);
 }
