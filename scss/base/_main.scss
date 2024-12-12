@@ -10,6 +10,7 @@ body {
     
 }
 .container {
-    background-color: $color-white;
-    // width: clamp(36rem, 90vw, 102.4rem);
+    background-color: $color-grey-light;
+    color:$color-grey;
+    width: 124rem;
 }
