@@ -12,6 +12,7 @@
 
 /* Стили компонентов*/
 @import 'components/_button.scss';
+@import 'components/_button-text.scss';
 @import 'components/_gallery.scss';
 
 //Layout style
@@ -19,7 +20,7 @@
 @import 'layout/grid.scss';
 
 
-
+@import 'pages/home.scss';
 
 
 

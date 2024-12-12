@@ -46,12 +46,4 @@
     }
 }
 
-/* Анимация заголовка - скучивание при наведении */
-@keyframes skewH2 {
-    0% {
-        transform: skew(30deg, 20deg);
-    }
-    100% {
-        transform: skew(0);
-    }
-}
+

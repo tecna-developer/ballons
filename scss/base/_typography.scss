@@ -49,19 +49,20 @@ body {
     background-clip: text;
     -webkit-background-clip: text;
     color:transparent;
+    transition: transform .3s;
     &:hover {
-        animation:skewH2 .3s ease-in-out;
+        transform: skewX(3deg) skewY(2deg) scale(1.05);
         backface-visibility: hidden;
     }
     
 }
 .title-third {
-    font-size: 2rem;
+    font-size: $font-size-h3;
     letter-spacing: .2rem;
-    font-weight: 500;
+    font-weight: 700;
 }
 .section__paragraph {
-    font-size: 1.6rem;
+    font-size: $font-size-paragraph;
     font-weight: 400;
     line-height: 140%;
     

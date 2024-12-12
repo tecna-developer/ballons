@@ -1,5 +1,4 @@
 .btn {
-
     &:link,
     &:visited {
         position: relative;
@@ -13,7 +12,6 @@
         transition: all .3s;
         font-size: 2rem;
     }
-
     &:hover {
         transform: translateY(-.4rem);
         box-shadow: 0rem .4rem .4rem 0rem rgba($color-black, 0.3);
