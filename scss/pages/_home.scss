@@ -1,8 +1,9 @@
 .section__about {
-    padding: 8rem 0;
+    padding-block: 8rem;
 }
 .section__adventure {
     padding-block: 20rem;
+    margin-bottom:8rem;
     background-image: linear-gradient(rgba($color-brown-dark, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url('../image/adveture_bg.jpg');
     background-position: center;
     background-size: cover;
@@ -11,4 +12,8 @@
     & > *{
         transform: skewY(-7deg);
     }
+}
+
+.section__tour {
+    padding-block-start: 21rem;
 }

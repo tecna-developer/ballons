@@ -1,0 +1,17 @@
+.card__tour {
+    background-color: yellow;
+    height: 50rem;
+    width: 100%;
+    perspective: 150rem;
+    transition: all 1s;
+    position: relative;
+    &_side {
+        position: absolute;
+        height: 50rem;
+        transition: all 0.7s;
+        color: #fff;
+    }
+    &:hover &_side-front &_side-back {
+        transform: rotateY(180deg);
+    }
+}

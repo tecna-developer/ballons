@@ -1,11 +1,12 @@
 html {
     font-size: 62.5%;
 }
+
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 1.6rem;
-    color:$color-gray-light;
+    color: $color-grey-light;
 }
 
 // Стили заголовка
@@ -48,30 +49,38 @@ body {
     background: linear-gradient(rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%);
     background-clip: text;
     -webkit-background-clip: text;
-    color:transparent;
+    color: transparent;
     transition: transform .3s;
+
     &:hover {
         transform: skewX(3deg) skewY(2deg) scale(1.05);
         backface-visibility: hidden;
     }
-    
+
 }
+
 .title-third {
     font-size: $font-size-h3;
     letter-spacing: .2rem;
     font-weight: 700;
+    color: $color-grey;
 }
+
 .section__paragraph {
     font-size: $font-size-paragraph;
     font-weight: 400;
     line-height: 140%;
-    
+    color: $color-grey;
+
 }
 
-.icon-Vector, .icon-Vector-1,.icon-Vector-2, .icon-Vector-3 {
+.icon-Vector,
+.icon-Vector-1,
+.icon-Vector-2,
+.icon-Vector-3 {
     font-size: 2.5rem;
     background: linear-gradient(rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%);
     -webkit-background-clip: text;
     background-clip: text;
-    color:transparent;
+    color: transparent;
 }

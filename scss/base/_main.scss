@@ -4,13 +4,15 @@
     box-sizing: border-box;
 }
 body {
-    background-color:#fff;
+    background-color:$color-white;
     padding: 5rem;
     letter-spacing: .2rem;
+    color:$color-grey;
     
 }
 .container {
     background-color: $color-grey-light;
-    color:$color-grey;
-    width: 124rem;
+    // position: relative;
+    // z-index: 0;
+    width: 134rem;
 }

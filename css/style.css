@@ -9,10 +9,12 @@ body {
   background-color: #fff;
   padding: 5rem;
   letter-spacing: 0.2rem;
+  color: #777777;
 }
 
 .container {
-  background-color: #fff;
+  background-color: #F7F7F7;
+  width: 134rem;
 }
 
 @keyframes leftToRight {
@@ -71,6 +73,10 @@ body {
   margin-block-end: 8rem;
 }
 
+.text-align-center {
+  text-align: center;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -79,7 +85,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  color: #777777;
+  color: #F7F7F7;
 }
 
 .title-first__main {
@@ -128,15 +134,20 @@ body {
   font-size: 2rem;
   letter-spacing: 0.2rem;
   font-weight: 700;
+  color: #777777;
 }
 
 .section__paragraph {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 140%;
+  color: #777777;
 }
 
-.icon-Vector, .icon-Vector-1, .icon-Vector-2, .icon-Vector-3 {
+.icon-Vector,
+.icon-Vector-1,
+.icon-Vector-2,
+.icon-Vector-3 {
   font-size: 2.5rem;
   background: linear-gradient(rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
   -webkit-background-clip: text;
@@ -249,6 +260,24 @@ body {
   text-align: center;
 }
 
+.card__tour {
+  background-color: yellow;
+  height: 50rem;
+  width: 100%;
+  perspective: 150rem;
+  transition: all 1s;
+  position: relative;
+}
+.card__tour_side {
+  position: absolute;
+  height: 50rem;
+  transition: all 0.7s;
+  color: #fff;
+}
+.card__tour:hover .card__tour_side-front .card__tour_side-back {
+  transform: rotateY(180deg);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -317,11 +346,12 @@ body {
 }
 
 .section__about {
-  padding: 8rem 0;
+  padding-block: 8rem;
 }
 
 .section__adventure {
   padding-block: 20rem;
+  margin-bottom: 8rem;
   background-image: linear-gradient(rgba(161, 79, 3, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../image/adveture_bg.jpg");
   background-position: center;
   background-size: cover;
@@ -330,4 +360,8 @@ body {
 }
 .section__adventure > * {
   transform: skewY(-7deg);
+}
+
+.section__tour {
+  padding-block-start: 21rem;
 }
