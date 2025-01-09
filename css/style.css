@@ -275,7 +275,7 @@ body {
 }
 
 .card__tour {
-  background-color: yellow;
+  background-color: rgb(240, 159, 36);
   height: 50rem;
   width: 34rem;
   perspective: 150rem;
@@ -366,6 +366,13 @@ body {
   background-image: linear-gradient(rgba(186, 133, 84, 0.6), rgba(0, 0, 0, 0.6));
 }
 
+.book {
+  width: 100%;
+  padding: 5rem;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 55%, rgba(186, 133, 84, 0.7) 56%, rgba(161, 79, 3, 0.8) 100%), url(../image/book-bg.jpg) center/cover no-repeat;
+  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.3);
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -440,7 +447,7 @@ body {
 .section__adventure {
   padding-block: 20rem;
   margin-bottom: 8rem;
-  background-image: linear-gradient(rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7)), url("../image/about_bg.jpg");
+  background-image: linear-gradient(rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7)), url("../image/adveture_bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -462,7 +469,6 @@ body {
 .section__book {
   padding-block: 10rem;
   background-image: linear-gradient(90deg, rgba(186, 133, 84, 0.04), #a14f03);
-  height: 70vh;
 }
 
 footer {
