@@ -83,6 +83,7 @@ body {
 .icon-Vector-1,
 .icon-Vector-2,
 .icon-Vector-3 {
+    display: inline-block;
     font-size: 2.5rem;
     background: linear-gradient(rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%);
     -webkit-background-clip: text;

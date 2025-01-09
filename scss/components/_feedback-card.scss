@@ -2,8 +2,10 @@
     &__card {
         background-color: rgba($color-white, .85);
         transform: skewX(-15deg);
-        width: 80%;
-        padding: 5rem 10rem;
+        width: 85%;
+        padding: 7rem 10rem;
+        position: relative;
+        box-shadow: $box-shadow;
         
         & > *{
             transform: skewX(15deg);
@@ -15,11 +17,41 @@
             border-radius: 10rem;
             shape-outside:circle(50% at 50% 50%);
             margin-inline-end: 4rem;
+            
+            transition: all .5s ease;
+            
+           
+        }    
+        &_name {
+            font-size: 2rem;
+            font-weight: 400;
+            color:$color-white;
+            letter-spacing: .2rem;
+           @include centerAbcolute;
+           width: 50%;
+           z-index: 2;
+           opacity: 0;
+           transition: all .3s ease;
+        }
+        &:hover img{
+            position: absolute;
+            transform: scale(1);
+            filter: blur(.2rem) brightness(80%);
+    
+    
+        }
+        &:hover &_name {
+            position: absolute;
+            opacity: 1;
         }
     }
+   
     &__photo {
         width: 100%;
         border-radius:10rem;
+        transform: scale(1.2);
+        
+       
     }
     &__descr {
         color:$color-grey;
@@ -27,4 +59,5 @@
         
        
     }
+    
 }

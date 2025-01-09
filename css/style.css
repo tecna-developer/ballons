@@ -14,6 +14,8 @@ body {
 
 .container {
   background-color: #F7F7F7;
+  position: relative;
+  z-index: 0;
   width: 134rem;
 }
 
@@ -153,6 +155,7 @@ body {
 .icon-Vector-1,
 .icon-Vector-2,
 .icon-Vector-3 {
+  display: inline-block;
   font-size: 2.5rem;
   background: linear-gradient(rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%);
   -webkit-background-clip: text;
@@ -265,8 +268,10 @@ body {
   text-align: center;
   width: 24rem;
   height: 30rem;
-  line-height: auto;
-  letter-spacing: 2px;
+}
+.card > p {
+  letter-spacing: 0.2rem;
+  font-size: 1.5rem;
 }
 
 .card__tour {
@@ -291,8 +296,10 @@ body {
 .feedback__card {
   background-color: rgba(255, 255, 255, 0.85);
   transform: skewX(-15deg);
-  width: 80%;
-  padding: 5rem 10rem;
+  width: 85%;
+  padding: 7rem 10rem;
+  position: relative;
+  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.3);
 }
 .feedback__card > * {
   transform: skewX(15deg);
@@ -304,14 +311,59 @@ body {
   border-radius: 10rem;
   shape-outside: circle(50% at 50% 50%);
   margin-inline-end: 4rem;
+  transition: all 0.5s ease;
+}
+.feedback__card_name {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  letter-spacing: 0.2rem;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  z-index: 2;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.feedback__card:hover img {
+  position: absolute;
+  transform: scale(1);
+  filter: blur(0.2rem) brightness(80%);
+}
+.feedback__card:hover .feedback__card_name {
+  position: absolute;
+  opacity: 1;
 }
 .feedback__photo {
   width: 100%;
   border-radius: 10rem;
+  transform: scale(1.2);
 }
 .feedback__descr {
   color: #777777;
   text-wrap: pretty;
+}
+
+.video__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  object-fit: cover;
+}
+
+.bg__gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: linear-gradient(rgba(186, 133, 84, 0.6), rgba(0, 0, 0, 0.6));
 }
 
 .header {
@@ -388,7 +440,7 @@ body {
 .section__adventure {
   padding-block: 20rem;
   margin-bottom: 8rem;
-  background-image: linear-gradient(rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%), url("../image/about_bg.jpg");
+  background-image: linear-gradient(rgba(186, 133, 84, 0.7), rgba(161, 79, 3, 0.7)), url("../image/about_bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -403,11 +455,11 @@ body {
 }
 
 .section__feedback {
+  position: relative;
   padding-block: 8rem;
-  background-image: linear-gradient(rgba(186, 133, 84, 0.6), rgba(161, 79, 3, 0.6));
 }
 
-.section__form {
+.section__book {
   padding-block: 10rem;
   background-image: linear-gradient(90deg, rgba(186, 133, 84, 0.04), #a14f03);
   height: 70vh;
