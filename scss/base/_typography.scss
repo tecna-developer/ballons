@@ -51,6 +51,9 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     transition: transform .3s;
+    &_white {
+        color:$color-white;
+    }
 
     &:hover {
         transform: skewX(3deg) skewY(2deg) scale(1.05);

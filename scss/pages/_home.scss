@@ -4,7 +4,7 @@
 .section__adventure {
     padding-block: 20rem;
     margin-bottom:8rem;
-    background-image: linear-gradient(rgba($color-brown-dark, 0.7) 0.03%, rgba($color-black, 0.7) 99.94%), url('../image/adveture_bg.jpg');
+    background-image: linear-gradient(rgba($color-brown-light, 0.7) 0.03%, rgba($color-brown-dark, 0.7) 99.94%), url('../image/adveture_bg.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -16,4 +16,8 @@
 
 .section__tour {
     padding-block-start: 21rem;
+}
+.section__feedback {
+    padding-block: 8rem;
+    background-image:linear-gradient(rgba($color-brown-light, 0.6), rgba($color-brown-dark, 0.6));
 }

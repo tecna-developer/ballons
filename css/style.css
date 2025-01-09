@@ -125,6 +125,9 @@ body {
   color: transparent;
   transition: transform 0.3s;
 }
+.title-second_white {
+  color: #fff;
+}
 .title-second:hover {
   transform: skewX(3deg) skewY(2deg) scale(1.05);
   backface-visibility: hidden;
@@ -278,6 +281,32 @@ body {
   transform: rotateY(180deg);
 }
 
+.feedback__card {
+  background-color: rgba(255, 255, 255, 0.85);
+  transform: skewX(-15deg);
+  width: 80%;
+  padding: 5rem 10rem;
+}
+.feedback__card > * {
+  transform: skewX(15deg);
+}
+.feedback__card_img {
+  float: left;
+  width: 17rem;
+  aspect-ratio: 1;
+  border-radius: 10rem;
+  shape-outside: circle(50% at 50% 50%);
+  margin-inline-end: 4rem;
+}
+.feedback__photo {
+  width: 100%;
+  border-radius: 10rem;
+}
+.feedback__descr {
+  color: #777777;
+  text-wrap: pretty;
+}
+
 .header {
   position: relative;
   height: 95vh;
@@ -352,7 +381,7 @@ body {
 .section__adventure {
   padding-block: 20rem;
   margin-bottom: 8rem;
-  background-image: linear-gradient(rgba(161, 79, 3, 0.7) 0.03%, rgba(0, 0, 0, 0.7) 99.94%), url("../image/adveture_bg.jpg");
+  background-image: linear-gradient(rgba(186, 133, 84, 0.7) 0.03%, rgba(161, 79, 3, 0.7) 99.94%), url("../image/adveture_bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -364,4 +393,9 @@ body {
 
 .section__tour {
   padding-block-start: 21rem;
+}
+
+.section__feedback {
+  padding-block: 8rem;
+  background-image: linear-gradient(rgba(186, 133, 84, 0.6), rgba(161, 79, 3, 0.6));
 }

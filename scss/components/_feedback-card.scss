@@ -1,0 +1,30 @@
+.feedback {
+    &__card {
+        background-color: rgba($color-white, .85);
+        transform: skewX(-15deg);
+        width: 80%;
+        padding: 5rem 10rem;
+        
+        & > *{
+            transform: skewX(15deg);
+        }
+        &_img {
+            float: left;
+            width: 17rem;
+            aspect-ratio: 1;
+            border-radius: 10rem;
+            shape-outside:circle(50% at 50% 50%);
+            margin-inline-end: 4rem;
+        }
+    }
+    &__photo {
+        width: 100%;
+        border-radius:10rem;
+    }
+    &__descr {
+        color:$color-grey;
+        text-wrap: pretty;
+        
+       
+    }
+}
