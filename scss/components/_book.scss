@@ -1,18 +1,22 @@
 .book {
     height: 50rem;
     width: $grid-width;
-    background:  linear-gradient(115deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 50%, rgba(186,133,84,0.6) 50%, rgba(161,79,3,0.6) 100%), url(../image/book-bg.jpg) center / cover no-repeat;
+    background: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 60%, rgba(186, 133, 84, 0.6) 50%, rgba(161, 79, 3, 0.6) 100%), url(../image/book-bg.jpg) center / cover no-repeat;
     box-shadow: $box-shadow;
-   
+    border-radius: .5rem;
+    overflow: hidden;
 
 }
+
 .form {
-    width: 60%;
+    width: 70%;
     padding-top: 5rem;
     padding-left: 5rem;
+
     &__block:not(:last-child) {
-        margin-bottom: 2rem;  
+        margin-bottom: 5rem;
     }
+
     &__input {
         border-radius: .5rem;
         border: none;
@@ -22,26 +26,33 @@
         color: $color-black;
         background-color: $color-white;
         transition: all .3s ease;
-        width: 50%;
+        width: 60%;
+
         &:focus {
             outline: none;
-            border-bottom:3px solid #D76363;
-            box-shadow:$box-shadow;
-            &:not(:invalid),  .form__input:empty {
-                border-bottom:3px solid #66D763;
-            }
+            border-bottom: .3rem solid #66D763;
+            box-shadow: $box-shadow;
         }
-        &:placeholder-shown + &__label {
-            opacity: 0;
+
+        &:focus:invalid {
+            border-bottom: .3rem solid #D76363;
         }
 
     }
+
     &__label {
         @include fontText;
         display: block;
-        color:$color-grey;
+        color: $color-grey;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        transition: .2s all;
     }
 
-
+    &__input:placeholder-shown+&__label {
+        opacity: 0;
+        visibility: none;
+        transform: translateY(-3rem);
+    }
 
 }

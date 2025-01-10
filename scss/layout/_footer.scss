@@ -1,0 +1,32 @@
+.footer {
+    background-color:$footer-color;
+    padding-block: 8rem;
+    color:$color-white;
+    
+    &__list {
+        text-align: center;
+        list-style: none;
+        text-transform: uppercase;
+        
+    }
+    &__item {
+        display: inline-block;
+        &:not(:last-child) {
+            margin-right: 5rem;
+            // position: relative;
+        }
+        
+    }
+    &__link {
+        &:link, &:visited{
+        text-decoration: none;
+        color:$color-white;
+        }
+        &:hover {
+            color:$color-brown-dark;
+            transform: skewX(3deg) skewY(2deg) scale(1.05);
+            text-shadow: $text-shadow;   
+        }
+
+    }
+}
