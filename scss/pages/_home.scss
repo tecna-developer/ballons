@@ -20,14 +20,14 @@
 .section__feedback {
    position: relative;
     padding-block: 8rem;
-    
-    // background-image:linear-gradient(rgba($color-brown-light, 0.6), rgba($color-brown-dark, 0.6));
 }
 .section__book {
     padding-block: 10rem;
     background-image:linear-gradient(90deg, rgba($color-brown-light, 0.04), rgba($color-brown-dark, 1));
    
 }
+
+
 footer {
     background-color:$footer-color;
     padding-block: 8rem;

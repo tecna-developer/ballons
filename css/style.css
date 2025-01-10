@@ -367,10 +367,52 @@ body {
 }
 
 .book {
-  width: 100%;
-  padding: 5rem;
-  background: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 55%, rgba(186, 133, 84, 0.7) 56%, rgba(161, 79, 3, 0.8) 100%), url(../image/book-bg.jpg) center/cover no-repeat;
+  height: 50rem;
+  width: 114rem;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(186, 133, 84, 0.6) 50%, rgba(161, 79, 3, 0.6) 100%), url(../image/book-bg.jpg) center/cover no-repeat;
   box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  width: 60%;
+  padding-top: 5rem;
+  padding-left: 5rem;
+}
+.form__block:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.form__input {
+  border-radius: 0.5rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+  padding: 2rem 0 2rem 2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  line-height: 100%;
+  color: #000;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  width: 50%;
+}
+.form__input:focus {
+  outline: none;
+  border-bottom: 3px solid #D76363;
+  box-shadow: 0rem 0.4rem 0.4rem 0rem rgba(0, 0, 0, 0.3);
+}
+.form__input:focus:not(:invalid), .form__input:focus .form__input:empty {
+  border-bottom: 3px solid #66D763;
+}
+.form__input:placeholder-shown + .form__input__label {
+  opacity: 0;
+}
+.form__label {
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  line-height: 100%;
+  display: block;
+  color: #777777;
 }
 
 .header {
