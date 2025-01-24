@@ -1,18 +1,34 @@
 .card__tour {
-    background-color: rgb(240, 159, 36);
     height: 50rem;
-    width: 34rem;
+    background-color:black;
     perspective: 150rem;
-    transition: all 1s;
+    -moz-perspective: 150rem;
+    transition: all .7s ease-out;
     position: relative;
     &_side {
         position: absolute;
+        top: 0;
+        left: 0;
         height: 50rem;
-        transition: all 0.7s;
+        transition: all .7s;
+        backface-visibility:hidden;
+        overflow: hidden;
         color: #fff;
+        width: 34rem;
+        // &-front {
+        //     // background:red;
+        // }
+        &-back {
+            background: linear-gradient(120deg, $color-brown-light, $color-brown-dark);
+            transform: rotateY(180deg);
+        }
     }
-    &:hover &_side-front &_side-back {
-        transform: rotateY(360deg);
-        background-color: red;
+    &:hover &_side-front {
+        transform: rotateY(-180deg);
+        
+    } 
+    &:hover &_side-back {
+        transform: rotateY(0deg);
+        
     }
 }

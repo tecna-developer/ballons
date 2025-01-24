@@ -7,7 +7,7 @@
 
 body {
   background-color: #fff;
-  padding: 5rem;
+  padding-inline: 5rem;
   letter-spacing: 0.2rem;
   color: #777777;
 }
@@ -274,22 +274,33 @@ body {
 }
 
 .card__tour {
-  background-color: rgb(240, 159, 36);
   height: 50rem;
-  width: 34rem;
+  background-color: black;
   perspective: 150rem;
-  transition: all 1s;
+  -moz-perspective: 150rem;
+  transition: all 0.7s ease-out;
   position: relative;
 }
 .card__tour_side {
   position: absolute;
+  top: 0;
+  left: 0;
   height: 50rem;
   transition: all 0.7s;
+  backface-visibility: hidden;
+  overflow: hidden;
   color: #fff;
+  width: 34rem;
 }
-.card__tour:hover .card__tour_side-front .card__tour_side-back {
-  transform: rotateY(360deg);
-  background-color: red;
+.card__tour_side-back {
+  background: linear-gradient(120deg, #BA8554, #A14F03);
+  transform: rotateY(180deg);
+}
+.card__tour:hover .card__tour_side-front {
+  transform: rotateY(-180deg);
+}
+.card__tour:hover .card__tour_side-back {
+  transform: rotateY(0deg);
 }
 
 .feedback__card {
@@ -449,12 +460,14 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto;
-  content: "";
-  display: table;
-  clear: both;
 }
 .row:not(:last-child) {
   margin-bottom: 8rem;
+}
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .col-1-of-2 {
