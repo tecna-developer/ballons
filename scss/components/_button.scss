@@ -1,5 +1,5 @@
 .btn {
-    &:link,
+    &, &:link,
     &:visited {
         position: relative;
         display: inline-block;
@@ -11,6 +11,7 @@
         border-radius: 5rem;
         transition: all .3s;
         font-size: 2rem;
+        border: none;
     }
     &:hover {
         transform: translateY(-.4rem);
@@ -45,5 +46,14 @@
         animation: btnToUp .4s ease-out .7s;
         animation-fill-mode: backwards;
 
+    }
+    &_brown {
+       &, &:link,
+        &:visited {
+            background-color: $color-brown-dark;
+            color:$color-white;
+        }
+    
+        
     }
 }

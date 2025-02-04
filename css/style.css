@@ -162,7 +162,7 @@ body {
 }
 
 /* Стили компонентов*/
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   position: relative;
   display: inline-block;
   text-transform: uppercase;
@@ -173,6 +173,7 @@ body {
   border-radius: 5rem;
   transition: all 0.3s;
   font-size: 2rem;
+  border: none;
 }
 .btn:hover {
   transform: translateY(-0.4rem);
@@ -202,6 +203,10 @@ body {
 .btn_animated {
   animation: btnToUp 0.4s ease-out 0.7s;
   animation-fill-mode: backwards;
+}
+.btn_brown, .btn_brown:link, .btn_brown:visited {
+  background-color: #A14F03;
+  color: #fff;
 }
 
 .btn-text:link, .btn-text:visited {
