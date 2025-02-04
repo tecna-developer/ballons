@@ -593,11 +593,17 @@ body {
 }
 .footer__link:link, .footer__link:visited {
   text-decoration: none;
-  color: #fff;
+  color: #777777;
+  transition: all 0.4s;
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  text-align: left;
 }
 .footer__link:hover {
   color: #A14F03;
-  transform: skewX(3deg) skewY(2deg) scale(1.05);
+  transform: rotate(5deg) scale(1.05);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
