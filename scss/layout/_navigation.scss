@@ -1,31 +1,31 @@
 .navigation {
     position: relative;
     &__toggle {
-       display: none;
+        display: none;
     }
-    
+
     &__button {
         background-color: $color-white;
         width: 7rem;
         height: 7rem;
-        border-radius:50%;
+        border-radius: 50%;
         position: fixed;
         top: 5rem;
         right: 7rem;
         z-index: 200;
         cursor: pointer;
-        text-align:center;
-        
+        text-align: center;
     }
     &__icon {
         position: relative;
         margin-top: 3.5rem;
-        &, &::after, &::before {
+        &,
+        &::after,
+        &::before {
             width: 30px;
             height: 2px;
-            background-color:$color-grey;
+            background-color: $color-grey;
             display: inline-block;
-            
         }
         &::after,
         &::before {
@@ -33,7 +33,7 @@
             position: absolute;
             left: 0;
         }
-        &::before{
+        &::before {
             top: -10px;
         }
         &::after {
@@ -44,12 +44,12 @@
         width: 5rem;
         height: 5rem;
         border-radius: 50%;
-        background:radial-gradient($color-brown-dark, $color-brown-light);
+        background: radial-gradient($color-brown-dark, $color-brown-light);
         position: fixed;
         top: 6rem;
         right: 8rem;
         z-index: 100;
-        transition: all .5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+        transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
     &__nav {
         height: 100vh;
@@ -61,14 +61,13 @@
 
         opacity: 0;
         width: 0;
-        transition: all .5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
-        
+        transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
     &__list {
         @include centerAbc;
 
         list-style: none;
-        color:$color-white;
+        color: $color-white;
         width: 100%;
     }
     &__item {
@@ -79,52 +78,50 @@
         }
     }
     &__link {
-        &:link, &:visited{
+        &:link,
+        &:visited {
             display: inline-block;
             text-decoration: none;
-            color:$color-white;
+            color: $color-white;
             text-transform: uppercase;
             font-size: 4rem;
             font-weight: 300;
-            letter-spacing: .5rem;
-            background:linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+            letter-spacing: 0.5rem;
+            background: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
             background-size: 220%;
-            transition: all .4s;
-
+            transition: all 0.4s;
         }
-        &:hover, &:active{
-            color:$color-brown-dark;
-            background-position:100%;
+        &:hover,
+        &:active {
+            color: $color-brown-dark;
+            background-position: 100%;
             transform: translateX(1rem);
-
         }
-        &:focus-visible{
+        &:focus-visible {
             outline: none;
         }
-        
     }
     &__toggle:checked ~ &__background {
         transform: scale(80);
     }
-    &__toggle:checked ~ &__nav  {
+    &__toggle:checked ~ &__nav {
         opacity: 1;
         width: 100%;
     }
-    &__button:hover &__icon::before{
+    &__button:hover &__icon::before {
         top: -10px;
     }
-    &__button:hover &__icon::after{
+    &__button:hover &__icon::after {
         top: 10px;
     }
     &__toggle:checked + &__button &__icon {
-        background:transparent;
-
+        background: transparent;
     }
-    &__toggle:checked +&__button &__icon::before{
+    &__toggle:checked + &__button &__icon::before {
         top: 0;
         transform: rotate(135deg);
     }
-    &__toggle:checked +&__button &__icon::after{
+    &__toggle:checked + &__button &__icon::after {
         top: 0;
         transform: rotate(-135deg);
     }
