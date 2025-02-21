@@ -1,0 +1,121 @@
+.card-tour {
+    height: 50rem;
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+   
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50rem;
+        transition: all .7s ease-out;
+        backface-visibility:hidden;
+        overflow: hidden;
+        color: #fff;
+        width: 34rem;
+        box-shadow: $box-shadow;
+        border-radius: .5rem;
+        &_front {
+            background: $color-white;
+        }
+        &_back {
+            background: linear-gradient(120deg, $color-brown-light, $color-brown-dark);
+            transform: rotateY(180deg);
+        }
+    }
+    &:hover &__side_front {
+        transform: rotateY(-180deg)
+
+    }
+    &:hover &__side_back {
+        transform: rotateY(0deg)
+    }
+    &__img {
+        background-blend-mode: hard-light;
+        height: 21rem;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        &_1 {
+            background: $color-brown-light url(/images/group.jpg) center / cover no-repeat;
+        }
+        &_2 {
+            background: $color-brown-light url(/images/private.jpg) center / cover no-repeat;
+        }
+        &_3 {
+            background: $color-brown-light url(/images/observation.jpg) center / cover no-repeat;
+        }
+    }
+    &__title {
+        font-size: 2.8rem;
+        text-transform: uppercase;
+        text-align: right;
+        font-weight: 300;
+        color:$color-white;
+        position: absolute;
+        top:17rem;
+        right: 0;
+    }
+    &__span {
+        background:linear-gradient(90deg, $color-brown-light, $color-brown-dark);
+        padding: 1rem 2rem .3rem 2rem;
+        &_2 {
+            position: absolute;
+            top: 3.4rem;
+            right: 0;
+            padding-bottom: 1rem;
+            padding-top: 0rem;
+        }
+
+    }
+    &__descr {
+        ul {
+            list-style: none;
+            text-align: center;
+            width: 75%;
+            margin: 0 auto;
+        }
+        li{
+            color:$color-grey;
+            font-size: $font-size-paragraph;
+            letter-spacing: .2rem;
+            font-weight: 700;
+            display: inline-block;
+            border-bottom: .1rem solid $color-grey;
+            &:not(:last-child){
+                margin-block-end: 2rem;
+            }
+
+
+        }
+    }
+
+
+
+
+
+
+
+    &__backside_box {
+        @include centerAbc;
+    }
+    &__text {
+        text-align: center;
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+        margin-block-end: 8rem;
+        &_1 {
+            font-size: $font-size-paragraph;
+            font-weight: 300;
+        }
+        &_2 {
+            font-size: 6rem;
+            font-weight: 500;
+        }
+
+        
+        
+
+
+    }
+
+}

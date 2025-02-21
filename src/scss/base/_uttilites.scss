@@ -1,0 +1,37 @@
+
+.margin-vertical-small {
+    margin-block-end: 1rem;
+
+    @include respond(tab-port) {
+        margin-block-end: 2rem;
+        
+    }
+}
+.margin-bottom-20px {
+    margin-block-end: 2rem;
+}
+
+.margin-vertical-big {
+    margin-block-end: 4rem;
+    @include respond(tab-port) {
+        margin-block-end: 6rem;
+        
+    }
+
+}
+.margin-bottom-50px {
+    margin-block-end: 5rem;
+
+    @include respond(tab-port) {
+        margin-block-end: 7rem;
+        
+    }
+
+}
+
+.margin-bottom-80px {
+    margin-block-end: 8rem;
+}
+.text-align-center{
+    text-align: center;
+}
