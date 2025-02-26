@@ -3,24 +3,26 @@
     &__card {
         background-color: rgba($color-white, 0.9);
         transform: skewX(-15deg);
-        width: 85%;
-        padding: 7rem 10rem;
+        width: 80%;
+        padding: 12rem 14rem;
         position: relative;
         box-shadow: $box-shadow;
+        margin: 0 auto;
 
-        @include respond(tab-port) {
-            transform: skewX(-5deg);
-            width: 90%;
+        // @include respond(tab-land) {
+        //     transform: skewX(-10deg);
+        //     width: 90%;
             
-        }
+        // }
 
         & > * {
             transform: skewX(15deg);
 
-            @include respond(tab-port) {
-                transform: skewX(-5deg);
+            // @include respond(tab-land) {
+            //     transform: skewX(10deg);
                 
-            }
+                
+            // }
 
 
         }

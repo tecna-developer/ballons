@@ -1,19 +1,19 @@
 html {
 
     font-size: 62.5%;
-    @include respond (tab-land){
+    @include respond(tab-land){
         font-size: 56.25%;
     }
     
-    @include respond (tab-port){
+    @include respond(tab-port){
         font-size: 50%;
     }
     
-    @include respond (phone){
+    @include respond(phone){
         font-size: 30%;
     }
 
-    @include respond (big-screen){
+    @include respond(big-screen){
         font-size: 75%;
     }
     
@@ -42,12 +42,17 @@ body {
         animation: leftToRight 1.7s ease 1s;
         backface-visibility: hidden;
 
-        @include respond (tab-port){
-            font-size: 3.6rem;
-            line-height: 4rem;
-            margin-bottom: 4rem;
+        @include respond(tab-land){
+            font-size: 3rem;
+            line-height: 8rem;
+            margin-bottom: 5rem;
 
         }
+        @include respond(tab-port){
+            font-size: 2.8rem;
+            line-height: 5;
+        }
+
     }
 
     &__secondary {
@@ -61,11 +66,14 @@ body {
         backface-visibility: hidden;
         margin-bottom: 6.5rem;
 
-        @include respond (tab-port){
+        @include respond(tab-land){
             font-size: 3rem;
             line-height: 6rem;
             margin-bottom: 8rem;
 
+        }
+        @include respond(tab-port){
+            font-size: 3.8rem;
         }
     }
 }

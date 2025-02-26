@@ -5,7 +5,7 @@
     }
 
     &__button {
-        background-color: $color-white;
+        background-color: rgb(248, 222, 222);
         width: 7rem;
         height: 7rem;
         border-radius: 50%;
@@ -16,8 +16,8 @@
         cursor: pointer;
         text-align: center;
 
-        @include respond(tab-port) {
-            right: 20rem;
+        @include respond(tab-land) {
+            right: 10rem;
             
         }
     }
@@ -55,6 +55,11 @@
         right: 8rem;
         z-index: 100;
         transition: all 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+
+        @include respond(tab-land) {
+            right: 11rem;
+            
+        }
     }
     &__nav {
         height: 100vh;

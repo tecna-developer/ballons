@@ -1,5 +1,6 @@
 .card-tour {
     height: 50rem;
+    width: 100%;
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
@@ -13,13 +14,14 @@
         backface-visibility:hidden;
         overflow: hidden;
         color: #fff;
-        width: 34rem;
+        width: 100%;
         box-shadow: $box-shadow;
         border-radius: .5rem;
         &_front {
             background: $color-white;
         }
         &_back {
+            width: 100%;
             background: linear-gradient(120deg, $color-brown-light, $color-brown-dark);
             transform: rotateY(180deg);
         }
@@ -91,11 +93,8 @@
 
 
 
-
-
-
-
     &__backside_box {
+        // width: 100%;
         @include centerAbc;
     }
     &__text {

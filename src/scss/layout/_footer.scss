@@ -13,7 +13,9 @@
         display: inline-block;
         &:not(:last-child) {
             margin-right: 5rem;
-            // position: relative;
+           @include respond(tab-land) {
+               margin-right: 2rem;
+           }
         }
         
     }
