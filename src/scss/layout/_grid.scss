@@ -7,12 +7,13 @@
     }
     @include clearfix;
 
-    @include respond (tab-land) {
+    @include respond(tab-land) {
         max-width: 90.1rem;
     }
-     @include respond (tab-port) {
+    @include respond(tab-port) {
         max-width: 60.1rem;
     }
+    
     
 }   
 
@@ -55,19 +56,18 @@
     }
     @include respond(tab-land) {
         &:not(:last-child){
-            margin-right: 2rem;
+            margin-right: 2rem; 
         }
         
     }
+    
     @include respond(tab-port) {
-        &:not(:last-child){
-            margin-right: 0rem;
-        }
-    }
-    @include respond(tab-port) {
+        float: none;
+        display: block;
         width: 100%;
+        margin-bottom: 3rem;
         &:not(:last-child){
-            margin-bottom: 3rem;
+            margin-right: 0rem !important;
         }
     }
 }    

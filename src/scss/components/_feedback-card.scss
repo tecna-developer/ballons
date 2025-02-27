@@ -2,29 +2,26 @@
    
     &__card {
         background-color: rgba($color-white, 0.9);
-        transform: skewX(-15deg);
+        transform: skewX(350deg);
         width: 80%;
         padding: 12rem 14rem;
         position: relative;
         box-shadow: $box-shadow;
         margin: 0 auto;
 
-        // @include respond(tab-land) {
-        //     transform: skewX(-10deg);
-        //     width: 90%;
+        @include respond(tab-port) {
+            transform: skewX(355deg);
+            width: 100%;
+            padding: 5rem 7rem;
             
-        // }
+        }
 
         & > * {
-            transform: skewX(15deg);
+            transform: skewX(-350deg);
 
-            // @include respond(tab-land) {
-            //     transform: skewX(10deg);
-                
-                
-            // }
-
-
+            @include respond(tab-port) {
+                transform: skewX(-355deg);
+            }
         }
         &_img {
             float: left;
@@ -35,6 +32,13 @@
             margin-inline-end: 4rem;
 
             transition: all 0.5s ease;
+
+            @include respond(tab-port) {
+                float: none;
+                display: block;
+               margin: 0 auto;
+               margin-bottom: 3rem; 
+            }
         }
         &_name {
             @include centerAbc;
@@ -67,5 +71,8 @@
     &__descr {
         color: $color-grey;
         text-wrap: pretty;
+        @include respond(tab-port){
+            text-align: center;
+        }
     }
 }

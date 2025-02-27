@@ -4,6 +4,9 @@
     perspective: 150rem;
     -moz-perspective: 150rem;
     position: relative;
+    @include respond(tab-port){
+        height: auto;
+    }
    
     &__side {
         position: absolute;
@@ -17,17 +20,43 @@
         width: 100%;
         box-shadow: $box-shadow;
         border-radius: .5rem;
+        @include respond(tab-port){
+            height: auto;
+            position: relative;
+        }
         &_front {
             background: $color-white;
+            @include respond(tab-port) {
+                padding-bottom: 13rem;
+                
+               
+
+            }
+            
         }
         &_back {
             width: 100%;
             background: linear-gradient(120deg, $color-brown-light, $color-brown-dark);
             transform: rotateY(180deg);
+
+            @include respond(tab-port) {
+                transform: rotateY(0deg);
+                clip-path:polygon(0 0, 100% 20%, 100% 100%, 0% 100%);
+                padding: 5rem;
+                padding-top: 10rem;
+                margin-top: -13rem;
+               
+            }
+
         }
     }
     &:hover &__side_front {
-        transform: rotateY(-180deg)
+        transform: rotateY(-180deg);
+
+        @include respond(tab-port) {
+            transform: rotateY(0deg)
+
+        }
 
     }
     &:hover &__side_back {
@@ -37,6 +66,10 @@
         background-blend-mode: hard-light;
         height: 21rem;
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+        
+        @include respond(tab-port){
+            height: 30rem;
+        }
         &_1 {
             background: $color-brown-light url(/images/group.jpg) center / cover no-repeat;
         }
@@ -48,7 +81,7 @@
         }
     }
     &__title {
-        font-size: 2.8rem;
+        font-size: 3.8rem;
         text-transform: uppercase;
         text-align: right;
         font-weight: 300;
@@ -56,6 +89,15 @@
         position: absolute;
         top:17rem;
         right: 0;
+        @include respond(tab-land){
+            font-size: 3rem;
+            margin-bottom: 2rem;
+        }
+        @include respond(tab-port) {
+            font-size: 2.8rem;
+            top: 25rem;
+            
+        }
     }
     &__span {
         background:linear-gradient(90deg, $color-brown-light, $color-brown-dark);
@@ -66,6 +108,10 @@
             right: 0;
             padding-bottom: 1rem;
             padding-top: 0rem;
+            @include respond(tab-port){
+                top: 3rem;
+
+            }
         }
 
     }
@@ -84,7 +130,11 @@
             display: inline-block;
             border-bottom: .1rem solid $color-grey;
             &:not(:last-child){
-                margin-block-end: 2rem;
+                margin-block-end: 1lh;
+            }
+            @include respond(tab-port){
+                font-size: 2.8rem;
+                margin-block-end: 1lh;
             }
 
 
@@ -96,6 +146,17 @@
     &__backside_box {
         // width: 100%;
         @include centerAbc;
+
+        @include respond(tab-port){
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0%, 0%);
+            text-align: center;
+            padding: 5rem;
+            padding-top: 10rem;
+        }
+        
     }
     &__text {
         text-align: center;

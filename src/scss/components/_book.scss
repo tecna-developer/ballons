@@ -1,5 +1,6 @@
 .book {
-    height:60vh;
+    height:100%;
+    padding: 2rem;
     width: 100%;
     margin: 0 auto;
     background:
@@ -15,12 +16,21 @@
     border-radius: 0.5rem;
     overflow: hidden;
 
-    @include respond (big-screen) {
-        height: 50vh;
+    
+    @include respond(tab-port){
+        height: auto;
+        
+        background:
+        linear-gradient(
+            105deg,
+            rgba(255, 255, 255, 0.9) 100%,
+            rgba(255, 255, 255, 0.7) 60%,
+            rgba(186, 133, 84, 0.6) 50%,
+            rgba(161, 79, 3, 0.6) 100%
+        ),
+        url(../images/book-bg.jpg) center / cover no-repeat;
     }
-    @include respond (tab-land) {
-        height: 40vh;
-    }
+
 }
 
 .form {
@@ -29,7 +39,18 @@
     padding-left: 5rem;
 
     &__block:not(:last-child) {
-        margin-bottom: 5rem;
+        margin-bottom: 3lh;
+        @include respond(tab-port){
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include respond(tab-land) {
+        width: 80%;
+    }
+    @include respond(tab-port){
+        width: 100%;
+
     }
 
     &__input {
@@ -43,6 +64,10 @@
         background-color: $color-white;
         transition: all 0.3s ease;
         width: 60%;
+
+        @include respond(tab-port){
+            width: 90%;
+        }
 
         &:focus {
             outline: none;
@@ -75,8 +100,8 @@
         -moz-appearance: none;
         appearance: none;
         border-radius:50%;
-        width: 3rem;
-        aspect-ratio: 1;
+        width: 2lh;
+        height: 2lh;;
         border:.4rem solid $color-brown-dark;
         transition: all .2s linear;
         outline: none;
@@ -87,6 +112,7 @@
         &-label {
             @include fontText;
             color:$color-grey;
+            
            
         }
         &:checked ~ &-label {

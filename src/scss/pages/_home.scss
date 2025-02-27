@@ -1,10 +1,10 @@
 .section__about {
     padding-block: 8rem;
+    // @include respond(tab-port) {
+    //     margin-bottom: 10rem;
+    // }
 
-    @include respond(tab-land) {
-        padding-inline: 6rem;
-    }
-
+    
    
 }
 .section__adventure {
@@ -27,6 +27,12 @@
         padding-block: 13rem;
         margin-bottom: 6rem;
     }
+    @include respond(tab-port) {
+        
+        padding-block: 15rem;
+        margin-bottom: 6rem;
+    }
+    
 }
 
 .section__tour {
