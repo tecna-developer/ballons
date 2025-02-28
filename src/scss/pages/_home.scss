@@ -11,11 +11,16 @@
     padding-block: 20rem;
     margin-bottom: 8rem;
     background-image: linear-gradient(rgba($color-brown-light, 0.7), rgba($color-brown-dark, 0.7)),
-        url("../images/adveture_bg.jpg");
+        url("../images/adveture_bg-small.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     transform: skewY(7deg);
+
+    @media (min-resolution: 192dpi) and (min-width:670px), (min-width:1340px) {
+        background: linear-gradient(rgba($color-brown-light, 0.6), rgba($color-brown-dark, 0.6)), url('../images/adveture_bg.jpg') center /cover no-repeat;
+        
+    }
 
 
     & > * {
