@@ -11,10 +11,23 @@
             rgba(186, 133, 84, 0.6) 50%,
             rgba(161, 79, 3, 0.6) 100%
         ),
-        url(../images/book-bg.jpg) center / cover no-repeat;
+        url(../images/book-bg-800.jpg) center / cover no-repeat;
     box-shadow: $box-shadow;
     border-radius: 0.5rem;
     overflow: hidden;
+
+    @media (min-resolution: 192dpi) and (min-width:670px), (min-width:1340px) {
+        background:
+        linear-gradient(
+            105deg,
+            rgba(255, 255, 255, 0.9) 0%,
+            rgba(255, 255, 255, 0.7) 60%,
+            rgba(186, 133, 84, 0.6) 50%,
+            rgba(161, 79, 3, 0.6) 100%
+        ),
+        url(../images/book-bg.jpg) center / cover no-repeat;
+
+    }
 
     
     @include respond(tab-port){
@@ -28,7 +41,19 @@
             rgba(186, 133, 84, 0.6) 50%,
             rgba(161, 79, 3, 0.6) 100%
         ),
-        url(../images/book-bg.jpg) center / cover no-repeat;
+        url(../images/book-bg-800.jpg) center / cover no-repeat;
+    }
+
+    @media (min-resolution: 192dpi) and (min-width:320px) {
+        background:
+        linear-gradient(
+            105deg,
+            rgba(255, 255, 255, 0.9) 100%,
+            rgba(255, 255, 255, 0.7) 60%,
+            rgba(186, 133, 84, 0.6) 50%,
+            rgba(161, 79, 3, 0.6) 100%
+        ),
+        url(../images/book-bg-320.jpg) center / cover no-repeat;
     }
 
 }
@@ -67,6 +92,7 @@
 
         @include respond(tab-port){
             width: 90%;
+            box-shadow:$box-shadow;
         }
 
         &:focus {
@@ -100,8 +126,8 @@
         -moz-appearance: none;
         appearance: none;
         border-radius:50%;
-        width: 2lh;
-        height: 2lh;;
+        width: 1lh;
+        height: 1lh;;
         border:.4rem solid $color-brown-dark;
         transition: all .2s linear;
         outline: none;

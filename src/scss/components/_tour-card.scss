@@ -71,13 +71,37 @@
             height: 30rem;
         }
         &_1 {
-            background: $color-brown-light url(/images/group.jpg) center / cover no-repeat;
+            background: $color-brown-light url(/images/group-800.jpg) center / cover no-repeat;
+
+            @media (min-resolution: 192dpi) and (min-width:670px), (min-width:1340px){
+                background: $color-brown-light url(/images/group.jpg) center / cover no-repeat;
+            }
+
+            @media (min-resolution:192dpi) and (min-width:320px) {
+                background: $color-brown-light url(/images/group-320.jpg) center / cover no-repeat;
+            }
         }
         &_2 {
-            background: $color-brown-light url(/images/private.jpg) center / cover no-repeat;
+            background: $color-brown-light url(/images/private-800.jpg) center / cover no-repeat;
+
+            @media (min-resolution: 192dpi) and (min-width:670px), (min-width:1340px){
+                background: $color-brown-light url(/images/private.jpg) center / cover no-repeat;
+            }
+
+            @media (min-resolution:192dpi) and (min-width:320px) {
+                background: $color-brown-light url(/images/private-320.jpg) center / cover no-repeat;
+            }
         }
         &_3 {
-            background: $color-brown-light url(/images/observation.jpg) center / cover no-repeat;
+            background: $color-brown-light url(/images/observation-800.jpg) center / cover no-repeat;
+
+            @media (min-resolution: 192dpi) and (min-width:670px), (min-width:1340px){
+                background: $color-brown-light url(/images/observation.jpg) center / cover no-repeat;
+            }
+
+            @media (min-resolution:192dpi) and (min-width:320px) {
+                background: $color-brown-light url(/images/observation-320.jpg) center / cover no-repeat;
+            }
         }
     }
     &__title {
