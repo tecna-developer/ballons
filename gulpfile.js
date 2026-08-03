@@ -61,4 +61,11 @@ gulp.task('images', function () {
         .pipe(gulp.dest("dist/images"));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images'));
+// og-image.png stays at the repository root because the README shows it, but
+// the Open Graph tags point at the site root, so the build needs a copy too.
+gulp.task('root-assets', function () {
+    return gulp.src("og-image.png")
+        .pipe(gulp.dest("dist/"));
+});
+
+gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'root-assets'));
