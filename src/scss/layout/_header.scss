@@ -32,7 +32,11 @@
         top: 47%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 100vw;
+        // 100vw counts the scrollbar, so the box came out ~15px wider than the
+        // content area and pushed the page sideways. .header is the containing
+        // block and already spans it, and the body padding is symmetric, so
+        // 100% centres the title in exactly the same place without overflowing.
+        width: 100%;
         text-align: center;
 
         @include respond(tab-port) {
