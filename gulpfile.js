@@ -68,4 +68,15 @@ gulp.task('root-assets', function () {
         .pipe(gulp.dest("dist/"));
 });
 
-gulp.task('default', gulp.parallel('watch', 'server', 'styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'root-assets'));
+// The icomoon stylesheet and its font files are hand-written, not compiled from
+// scss, so the 'styles' task never saw them. index.html links style-icons.css
+// directly — without this the icons fall back to empty boxes.
+gulp.task('icon-font', function () {
+    return gulp.src(["src/css/style-icons.css", "src/css/fonts/**/*"], { base: "src/css" })
+        .pipe(gulp.dest("dist/css"));
+});
+
+// Everything the site needs, without 'watch' and 'server' — this is what CI runs.
+gulp.task('build', gulp.parallel('styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'root-assets', 'icon-font'));
+
+gulp.task('default', gulp.parallel('watch', 'server', 'build'));
