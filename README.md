@@ -90,3 +90,9 @@ fixed `padding-inline: 5rem` while several blocks are sized independently of it.
 Source lives on `main`; the demo is served from a separate `gh-pages` branch holding the
 built output. There is no CI, so a commit to `main` alone will not update the live page —
 the build has to be copied across.
+
+`src/index.html` is the source of truth for the `<head>`. The Open Graph tags once existed
+only on `gh-pages`, which meant the next `gulp html` would have quietly dropped them from
+the published page; they now live in the source, and `gulp root-assets` copies `og-image.png`
+into `dist/` so the tags have something to point at. If you hand-edit `gh-pages` again, put
+the same change in `src/` or it will not survive the next build.
