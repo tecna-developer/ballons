@@ -87,12 +87,12 @@ fixed `padding-inline: 5rem` while several blocks are sized independently of it.
 
 ## Deployment
 
-Source lives on `main`; the demo is served from a separate `gh-pages` branch holding the
-built output. There is no CI, so a commit to `main` alone will not update the live page —
-the build has to be copied across.
+Source lives on `main`. A push there runs `.github/workflows/deploy.yml`, which builds with
+`npm run build` and publishes `dist/` to the `gh-pages` branch, which is what Pages serves.
+`dist/` is not tracked — CI produces it.
 
-`src/index.html` is the source of truth for the `<head>`. The Open Graph tags once existed
-only on `gh-pages`, which meant the next `gulp html` would have quietly dropped them from
-the published page; they now live in the source, and `gulp root-assets` copies `og-image.png`
-into `dist/` so the tags have something to point at. If you hand-edit `gh-pages` again, put
-the same change in `src/` or it will not survive the next build.
+`gh-pages` is therefore generated output. Do not edit it by hand: the next deploy replaces
+it wholesale. Everything the published page needs must come out of `gulp build`, which is
+why there are copy tasks for `og-image.png` and for the hand-written icomoon stylesheet and
+fonts in `src/css` — neither is compiled from scss, so neither was reaching `dist/` on its
+own.
