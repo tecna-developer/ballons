@@ -82,9 +82,6 @@ browns, two greys and a footer colour, all in `_variables.scss`.
 The page is presentational. The booking form validates nothing and submits nowhere, and the
 navigation links point at anchors on the same page. Content is in Russian.
 
-Known rough edge: at some desktop widths the page scrolls horizontally — the body carries a
-fixed `padding-inline: 5rem` while several blocks are sized independently of it.
-
 ## Deployment
 
 Source lives on `main`. A push there runs `.github/workflows/deploy.yml`, which builds with
