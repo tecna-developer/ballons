@@ -24,14 +24,15 @@ architecture and the CSS-only navigation and hover effects are carried over.
 
 ```bash
 npm install
-npx gulp
+npm run dev      # dev server with live reload
+npm run build    # production build into dist/
+npm run preview  # serve dist/ locally
 ```
 
-The default task compiles the SCSS, copies fonts, icons and images, minifies the HTML into
-`dist/` and serves that directory with browser-sync, watching `src/scss` and `src/*.html`.
-
-Styles go through sass (`outputStyle: compressed`) → autoprefixer → clean-css and land as
-`dist/css/style.min.css`; images pass through imagemin.
+Vite builds from `src/` (`vite.config.mjs`): both HTML pages are entry points, SCSS is
+compiled by Vite itself, and URLs are relative (`base: './'`) because the site is served
+from the `/ballons/` subpath on GitHub Pages. Files in `public/` (icons, manifest) are
+copied as they are.
 
 ## Structure
 
@@ -40,6 +41,8 @@ The SCSS follows a 7-1-style split:
 ```
 src/index.html, src/en/index.html   Russian and English pages
 src/js/main.js                   closes the menu on link click
+public/icon/                     favicons, logo, web manifest
+vite.config.mjs                  Vite config (two pages, relative base)
 src/scss/style.scss              imports everything in order
 src/scss/abstract/               _variables, _mixins (respond, clearfix, centerAbc), _functions
 src/scss/base/                   _main (reset), _typography (root font sizes), _animations, _uttilites
@@ -48,7 +51,7 @@ src/scss/components/             _button, _button-text, _card, _tour-card, _feed
 src/scss/layout/                 _header, _grid, _navigation, _footer
 src/scss/pages/                  _home
 src/images/                      put photos here (empty for now)
-src/css/style-icons.css          icomoon icon font
+src/css/style-icons.css          icomoon icon font (inlined by Vite)
 dist/                            build output
 ```
 
@@ -63,10 +66,8 @@ The site is presentational: booking happens through Instagram, WhatsApp or Teleg
 ## Deployment
 
 Source lives on `main`. A push there runs `.github/workflows/deploy.yml`, which builds with
-`npm run build` and publishes `dist/` to the `gh-pages` branch, which is what Pages serves.
+`npm run build` (Vite) and publishes `dist/` to the `gh-pages` branch, which is what Pages serves.
 `dist/` is not tracked — CI produces it.
 
 `gh-pages` is therefore generated output. Do not edit it by hand: the next deploy replaces
-it wholesale. Everything the published page needs must come out of `gulp build`, which is
-why there is a copy task for the hand-written icomoon stylesheet and fonts in `src/css`:
-they are not compiled from scss, so they would not reach `dist/` otherwise.
+it wholesale.
