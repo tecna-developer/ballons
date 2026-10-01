@@ -1,149 +1,25 @@
 .book {
-    height:100%;
-    padding: 2rem;
     width: 100%;
     margin: 0 auto;
-    background:
-        linear-gradient(
-            105deg,
-            rgba(255, 255, 255, 0.9) 0%,
-            rgba(255, 255, 255, 0.7) 60%,
-            rgba(186, 133, 84, 0.6) 50%,
-            rgba(161, 79, 3, 0.6) 100%
-        ),
-        url(../images/book-bg-800.jpg) center / cover no-repeat;
+    padding: 6rem 2rem;
+    background-color: rgba($color-white, 0.9);
     box-shadow: $box-shadow;
     border-radius: 0.5rem;
-    overflow: hidden;
-
-    @media (min-resolution: 192dpi) and (min-width:670px), (min-width:1340px) {
-        background:
-        linear-gradient(
-            105deg,
-            rgba(255, 255, 255, 0.9) 0%,
-            rgba(255, 255, 255, 0.7) 60%,
-            rgba(186, 133, 84, 0.6) 50%,
-            rgba(161, 79, 3, 0.6) 100%
-        ),
-        url(../images/book-bg.jpg) center / cover no-repeat;
-
-    }
-
-    
-    @include respond(tab-port){
-        height: auto;
-        
-        background:
-        linear-gradient(
-            105deg,
-            rgba(255, 255, 255, 0.9) 100%,
-            rgba(255, 255, 255, 0.7) 60%,
-            rgba(186, 133, 84, 0.6) 50%,
-            rgba(161, 79, 3, 0.6) 100%
-        ),
-        url(../images/book-bg-800.jpg) center / cover no-repeat;
-    }
-
-    @media (min-resolution: 192dpi) and (min-width:320px) {
-        background:
-        linear-gradient(
-            105deg,
-            rgba(255, 255, 255, 0.9) 100%,
-            rgba(255, 255, 255, 0.7) 60%,
-            rgba(186, 133, 84, 0.6) 50%,
-            rgba(161, 79, 3, 0.6) 100%
-        ),
-        url(../images/book-bg-320.jpg) center / cover no-repeat;
-    }
-
+    text-align: center;
 }
 
-.form {
-    width: 70%;
-    padding-top: 5rem;
-    padding-left: 5rem;
-
-    &__block:not(:last-child) {
-        margin-bottom: 3lh;
-        @include respond(tab-port){
-            margin-bottom: 2rem;
-        }
+.contacts {
+    &__text {
+        max-width: 60rem;
+        margin: 0 auto 5rem;
+        font-size: $font-size-paragraph;
+        line-height: 140%;
     }
 
-    @include respond(tab-land) {
-        width: 80%;
-    }
-    @include respond(tab-port){
-        width: 100%;
-
-    }
-
-    &__input {
-        @include fontText;
-
-        border-radius: 0.5rem;
-        border: none;
-        border-bottom: 3px solid transparent;
-        padding: 2rem 0 2rem 2rem;
-        color: $color-black;
-        background-color: $color-white;
-        transition: all 0.3s ease;
-        width: 60%;
-
-        @include respond(tab-port){
-            width: 90%;
-            box-shadow:$box-shadow;
-        }
-
-        &:focus {
-            outline: none;
-            border-bottom: 0.3rem solid #66d763;
-            box-shadow: $box-shadow;
-        }
-
-        &:focus:invalid {
-            border-bottom: 0.3rem solid #d76363;
-        }
-    }
-
-    &__label {
-        @include fontText;
-
-        display: block;
-        color: $color-grey;
-        margin-top: 1rem;
-        margin-left: 1.5rem;
-        transition: 0.2s all;
-    }
-
-    &__input:placeholder-shown + &__label {
-        opacity: 0;
-        visibility: none;
-        transform: translateY(-3rem);
-    }
-    &__radio {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        border-radius:50%;
-        width: 1lh;
-        height: 1lh;;
-        border:.4rem solid $color-brown-dark;
-        transition: all .2s linear;
-        outline: none;
-        margin-right: 0.5rem;
-        &:checked {
-            border:1rem solid $color-brown-dark;
-        }
-        &-label {
-            @include fontText;
-            color:$color-grey;
-            
-           
-        }
-        &:checked ~ &-label {
-            color:$color-brown-dark;
-        }
-
+    &__buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3rem;
     }
 }

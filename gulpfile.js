@@ -15,7 +15,7 @@ gulp.task('server', function() {
         }
     });
 
-    gulp.watch("src/*.html").on('change', browserSync.reload);
+    gulp.watch("src/**/*.html").on('change', browserSync.reload);
 });
 
 gulp.task('styles', function() {
@@ -30,11 +30,11 @@ gulp.task('styles', function() {
 
 gulp.task('watch', function() {
     gulp.watch("src/scss/**/*.+(scss|sass|css)", gulp.parallel('styles'));
-    gulp.watch("src/*.html").on('change', gulp.parallel('html'));
+    gulp.watch("src/**/*.html").on('change', gulp.parallel('html'));
 });
 
 gulp.task('html', function () {
-    return gulp.src("src/*.html")
+    return gulp.src("src/**/*.html")
         .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(gulp.dest("dist/"));
 });
@@ -61,13 +61,6 @@ gulp.task('images', function () {
         .pipe(gulp.dest("dist/images"));
 });
 
-// og-image.png stays at the repository root because the README shows it, but
-// the Open Graph tags point at the site root, so the build needs a copy too.
-gulp.task('root-assets', function () {
-    return gulp.src("og-image.png")
-        .pipe(gulp.dest("dist/"));
-});
-
 // The icomoon stylesheet and its font files are hand-written, not compiled from
 // scss, so the 'styles' task never saw them. index.html links style-icons.css
 // directly — without this the icons fall back to empty boxes.
@@ -77,6 +70,6 @@ gulp.task('icon-font', function () {
 });
 
 // Everything the site needs, without 'watch' and 'server' — this is what CI runs.
-gulp.task('build', gulp.parallel('styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'root-assets', 'icon-font'));
+gulp.task('build', gulp.parallel('styles', 'scripts', 'fonts', 'icons', 'html', 'images', 'icon-font'));
 
 gulp.task('default', gulp.parallel('watch', 'server', 'build'));
