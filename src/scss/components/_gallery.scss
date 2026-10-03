@@ -4,6 +4,9 @@
     &__img {
         position: absolute;
         width:55%;
+        aspect-ratio: 4 / 3;
+        // TODO: replace the placeholder gradients with photos (see the gallery in index.html)
+        background: linear-gradient(135deg, $color-brown-light, $color-brown-dark);
         border-radius:.5rem;
         outline-offset: 1rem;
         transition: all .2s;
